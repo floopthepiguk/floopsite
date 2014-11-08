@@ -1,30 +1,44 @@
 var pig = document.getElementById("pig");
-var screenGutter = 100;
-var maxRotation = 25;
+var maxRotation = 10;
+var incidence = 10;
 
-setInterval(function(){movePig(screenGutter, maxRotation)}, 1000);
 
-function movePig(screenGutter, maxRotation) {
-  if(random(1,2) == 1) {
+setInterval(function(){updatePig(maxRotation)}, 3000);
+
+
+/*
+ * 
+ * updatePig
+ *
+ * Calculates the new position of the pig
+ *
+ */
+function updatePig(maxRotation) {
+  if(random(0,incidence) == 1) {
     return;
   }
-  size = screenSize();
-  var left  = random(screenGutter, size[0]-screenGutter);
-  var top   = random(screenGutter, size[1]-screenGutter);
-  drawPig(top, left, random(0, maxRotation), left < (size[0]/2));
+  var rotation = random(0, maxRotation*2) - maxRotation;
+  drawPig(rotation);
 }
 
-function drawPig(top, left, rotateAmount, rotateLeft) {
-  pig.style.left = left + "px";
-  pig.style.top = top + "px";
-  var rotation = ((rotateLeft == true) ? -rotateAmount : rotateAmount);
+
+/*
+ * drawPig
+ *
+ * Updates the pig's styles
+ *
+ */
+function drawPig(rotateAmount) {
+  var rotation = rotateAmount;
   pig.style.webkitTransform = "rotate(" + rotation + "deg)"
 }
 
-function screenSize() {
-  return [$(document).width(),$(document).height()];
-}
 
+/*
+ *
+ * Convinience method, returns random positive number between min and max
+ *
+ */
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
 }

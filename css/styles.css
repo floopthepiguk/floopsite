@@ -1,24 +1,19 @@
-#pig{
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 100px solid black;
+html {
+       overflow-y: scroll;
+}
+.container {
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.pig-position {
-  position: absolute;
-  top: -500px;
-  left:-500px;
-  -ms-transform: rotate(0deg); /* IE 9 */
-  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-  transform: rotate(0deg);
-}
-
-.pig-transitions {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+h1 {
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 110px;
+  letter-spacing: 10px;
+  border-bottom: 15px solid #222;
+  padding-bottom: 20px;
 }
