@@ -1,0 +1,22 @@
+/*
+
+  From the root folder, compile with
+    
+    sass --watch css/src/application.scss:css/lib/application.css --style compressed
+
+*/
+
+//Helpers
+@import 'helpers/utility';
+@import 'helpers/variables';
+
+//Base
+@import 'base/normalize';
+@import 'base/boilerplate';
+
+//Theme
+@import 'theme/screen';
+@import 'theme/print';
+
+//Components
+@import 'components/pig';
