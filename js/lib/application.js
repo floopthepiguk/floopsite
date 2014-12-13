@@ -1,32 +1,37 @@
 (function() {
-  $(function() {
-    var drawPig, incidence, maxRotation, pig, random, updatePig;
-    updatePig = function(maxRotation) {
-      var rotation;
-      if (random(0, incidence) === 1) {
-        return;
+  this.app = angular.module("floopSite", ["ngRoute"]);
+
+}).call(this);
+
+(function() {
+
+
+}).call(this);
+
+(function() {
+  this.app.controller("PigController", [
+    "$scope", function($scope) {
+      var drawPig, maxRotation, pig, updatePig;
+      updatePig = function(maxRotation) {
+        var rotation;
+        rotation = _.random(0, maxRotation * 2) - maxRotation;
+        return drawPig(rotation);
+      };
+      drawPig = function(rotateAmount) {
+        var rotation;
+        rotation = rotateAmount;
+        return pig.style.webkitTransform = "rotate(" + rotation + "deg)";
+      };
+      pig = $("#pig")[0];
+      if (pig) {
+        maxRotation = 10;
+        return setInterval((function(_this) {
+          return function() {
+            return updatePig(10);
+          };
+        })(this), 3000);
       }
-      rotation = random(0, maxRotation * 2) - maxRotation;
-      drawPig(rotation);
-    };
-    drawPig = function(rotateAmount) {
-      var rotation;
-      rotation = rotateAmount;
-      pig.style.webkitTransform = "rotate(" + rotation + "deg)";
-    };
-    random = function(min, max) {
-      return Math.floor((Math.random() * max) + min);
-    };
-    pig = $("#pig")[0];
-    if (pig) {
-      maxRotation = 10;
-      incidence = 10;
-      return setInterval((function(_this) {
-        return function() {
-          return updatePig(10);
-        };
-      })(this), 3000);
     }
-  });
+  ]);
 
 }).call(this);

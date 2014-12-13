@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 
     coffee:
       compile:
-        files: 'js/lib/application.js': ['js/src/*.coffee']
+        files: 'js/lib/application.js': ['js/src/app.coffee','js/src/config/*.coffee','js/src/controllers/*.coffee']
 
     sass:
       dist:
