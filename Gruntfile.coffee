@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 
     coffee:
       compile:
-        files: 'js/build/<%= pkg.name %>.js': ['js/src/*.coffee']
+        files: 'js/lib/application.js': ['js/src/*.coffee']
 
     sass:
       dist:
@@ -17,14 +17,14 @@ module.exports = (grunt) ->
 
     bower_concat:
       all:
-        dest: 'js/build/bower_components.js'
+        dest: 'js/lib/bower_components.js'
 
     uglify:
       options:
         banner: "/*! <%= pkg.name %> <%= grunt.template.today(\"yyyy-mm-dd\") %> */\n"
       build:
-        src: ['js/build/bower_components.js','js/build/<%= pkg.name %>.js']
-        dest: 'js/lib/<%= pkg.name %>.min.js'
+        src: ['js/lib/bower_components.js','js/lib/application.js']
+        dest: 'js/lib/application.min.js'
 
     watch:
       sass:

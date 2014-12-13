@@ -18,13 +18,15 @@
       return Math.floor((Math.random() * max) + min);
     };
     pig = $("#pig")[0];
-    maxRotation = 10;
-    incidence = 10;
-    return setInterval((function(_this) {
-      return function() {
-        return updatePig(10);
-      };
-    })(this), 3000);
+    if (pig) {
+      maxRotation = 10;
+      incidence = 10;
+      return setInterval((function(_this) {
+        return function() {
+          return updatePig(10);
+        };
+      })(this), 3000);
+    }
   });
 
 }).call(this);

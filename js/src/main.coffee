@@ -27,8 +27,10 @@ $ ->
 
 
   pig = $("#pig")[0]
-  maxRotation = 10
-  incidence = 10
-  setInterval =>
-    updatePig(10)
-  , 3000
+
+  if pig
+    maxRotation = 10
+    incidence = 10
+    setInterval =>
+      updatePig(10)
+    , 3000
