@@ -2,5 +2,5 @@
 
 ```
 npm install
-grunt 
+grunt || grunt watch
 ```

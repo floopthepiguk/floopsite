@@ -25,13 +25,22 @@ module.exports = (grunt) ->
       build:
         src: ['js/build/bower_components.js','js/build/<%= pkg.name %>.js']
         dest: 'js/lib/<%= pkg.name %>.min.js'
+
+    watch:
+      sass:
+        files: ['css/src/**/*.scss']
+        tasks: ['sass']
+      coffee:
+        files: ['js/src/*.coffee','js/src/**/*.coffee']
+        tasks: ['coffee','uglify']
   
-  # Load the plugin that provides the "uglify" task.
+
+  # Load the plugins
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-bower-concat'
   grunt.loadNpmTasks 'grunt-contrib-sass'
-
+  grunt.loadNpmTasks 'grunt-contrib-watch'
 
   # Default task(s).
   grunt.registerTask 'default', ['sass','coffee','bower_concat','uglify']
