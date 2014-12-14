@@ -44,4 +44,6 @@ module.exports = (grunt) ->
 
   # Default task(s).
   grunt.registerTask 'default', ['sass','coffee','bower_concat','uglify']
+  #grunt.registerTask 'default', ['sass']                             # CSS only
+  #grunt.registerTask 'default', ['coffee','bower_concat','uglify']   # Coffeescript only
   return
