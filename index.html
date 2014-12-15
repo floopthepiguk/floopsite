@@ -17,10 +17,14 @@
         <![endif]-->
 
         <div class="container" id="container">
+
+          <nav>
+            <a href = "#/about">About</a> | <a href = "#/installations">Installations</a> | <a href = "#/faq">FAQ</a>
+
+          </nav>
           <h1>Floop The Pig</h1>
-          <div ng-controller="PigController">
-            <img id = "pig" class="pig-position pig-transitions" src = "img/floop-the-pig.svg" style="-webkit-transform: rotate({{angle}}deg);" />
-          </div>
+          <img ng-controller="PigController" class="pig-position pig-transitions" src = "img/floop-the-pig.svg" style="-webkit-transform: rotate({{angle}}deg);" />
+          <div id="content" ng-view></div>
         </div>
     </body>
 </html>
