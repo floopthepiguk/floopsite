@@ -7,11 +7,11 @@
   this.app.config([
     "$routeProvider", function($routeProvider) {
       return $routeProvider.when("/about", {
-        templateUrl: "views/about.html"
+        templateUrl: "app/views/about.html"
       }).when("/installations", {
-        templateUrl: "views/installation-list.html"
+        templateUrl: "app/views/installation-list.html"
       }).when("/faq", {
-        templateUrl: "views/faq.html"
+        templateUrl: "app/views/faq.html"
       }).otherwise({
         redirectTo: "/about"
       });
