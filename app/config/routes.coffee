@@ -1,11 +1,10 @@
 @app.config [
-  "$routeProvider"
+  "$routeProvider",
   ($routeProvider) ->
-    $routeProvider.when("/about",
-      templateUrl: "app/views/about.html"
-    ).when("/installations",
-      templateUrl: "app/views/installation-list.html"
-    ).when("/faq",
-      templateUrl: "app/views/faq.html"
-    ).otherwise redirectTo: "/about"
+    $routeProvider
+    .when("/",              templateUrl: "app/views/home.html")
+    .when("/about",         templateUrl: "app/views/about.html")
+    .when("/installations", templateUrl: "app/views/installations.html")
+    .when("/faq",           templateUrl: "app/views/faq.html")
+    .otherwise redirectTo: "/"
 ]

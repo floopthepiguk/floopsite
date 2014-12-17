@@ -6,14 +6,16 @@
 (function() {
   this.app.config([
     "$routeProvider", function($routeProvider) {
-      return $routeProvider.when("/about", {
+      return $routeProvider.when("/", {
+        templateUrl: "app/views/home.html"
+      }).when("/about", {
         templateUrl: "app/views/about.html"
       }).when("/installations", {
-        templateUrl: "app/views/installation-list.html"
+        templateUrl: "app/views/installations.html"
       }).when("/faq", {
         templateUrl: "app/views/faq.html"
       }).otherwise({
-        redirectTo: "/about"
+        redirectTo: "/"
       });
     }
   ]);
@@ -23,15 +25,20 @@
 (function() {
   this.app.controller("PigController", [
     "$scope", "$interval", function($scope, $interval) {
-      var animFrequency, maxRotation;
+      var animFrequency, animPromise, maxRotation;
       $scope.angle = 0;
+      animPromise = void 0;
       animFrequency = 3000;
       maxRotation = 20;
-      return (function(maxRotation) {
-        return $interval(function() {
+      (function(maxRotation) {
+        return animPromise = $interval(function() {
+          console.log("Angling!");
           return $scope.angle = _.random(-maxRotation, maxRotation);
         }, animFrequency);
       })(maxRotation);
+      return $scope.$on("$destroy", function() {
+        return $interval.cancel(animPromise);
+      });
     }
   ]);
 

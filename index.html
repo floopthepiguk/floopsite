@@ -12,19 +12,15 @@
         <link href='http://fonts.googleapis.com/css?family=Special+Elite|Montserrat:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <!--[if lt IE 9]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <div class="container" id="container">
+       <div class="container" id="container">
 
           <nav>
-            <a href = "#/about">About</a> | <a href = "#/installations">Installations</a> | <a href = "#/faq">FAQ</a>
-
+            <a href = "#/">Home</a> | <a href = "#/about">About</a> | <a href = "#/installations">Installations</a> | <a href = "#/faq">FAQ</a>
           </nav>
+
           <h1>Floop The Pig</h1>
-          <img ng-controller="PigController" class="pig-position pig-transitions" src = "app/img/floop-the-pig.svg" style="-webkit-transform: rotate({{angle}}deg);" />
-          <div id="content" ng-view></div>
+          <div ng-view></div>
+
         </div>
     </body>
 </html>
