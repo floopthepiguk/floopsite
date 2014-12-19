@@ -1,18 +1,20 @@
-{"installations":[
+[
     {
-      "name":"PicoBlog", 
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget risus sed sapien fermentum congue. Fusce ac efficitur diam. Donec non tempor velit, non tincidunt augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut vulputate mi, non pellentesque odio.",
-      "page":"picoblog.html"
-    }, 
+        "name": "Picoblog", 
+        "slug": "picoblog", 
+        "thumbnail": "http://lorempixel.com/100/100/", 
+        "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non metus vehicula, aliquet nunc eu, pharetra sapien. Suspendisse et rhoncus eros. In hac habitasse platea dictumst. Nunc mi justo, accumsan id dapibus vitae, mattis ac risus. Ut ultricies purus non libero placerat tincidunt."
+    },
     {
-      "name":"PicoBlog", 
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget risus sed sapien fermentum congue. Fusce ac efficitur diam. Donec non tempor velit, non tincidunt augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut vulputate mi, non pellentesque odio.",
-      "page":"picoblog.html"
-    }, 
+        "name": "Picoblog2", 
+        "slug": "picoblog2", 
+        "thumbnail": "http://lorempixel.com/100/100/", 
+        "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non metus vehicula, aliquet nunc eu, pharetra sapien. Suspendisse et rhoncus eros. In hac habitasse platea dictumst. Nunc mi justo, accumsan id dapibus vitae, mattis ac risus. Ut ultricies purus non libero placerat tincidunt."
+    },
     {
-      "name":"PicoBlog", 
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget risus sed sapien fermentum congue. Fusce ac efficitur diam. Donec non tempor velit, non tincidunt augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut vulputate mi, non pellentesque odio.",
-      "page":"picoblog.html"
+        "name": "Picoblog3", 
+        "slug": "picoblog3", 
+        "thumbnail": "http://lorempixel.com/100/100/", 
+        "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non metus vehicula, aliquet nunc eu, pharetra sapien. Suspendisse et rhoncus eros. In hac habitasse platea dictumst. Nunc mi justo, accumsan id dapibus vitae, mattis ac risus. Ut ultricies purus non libero placerat tincidunt."
     }
-]}
-
+]

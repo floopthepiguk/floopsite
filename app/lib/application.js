@@ -10,12 +10,39 @@
         templateUrl: "app/views/home.html"
       }).when("/about", {
         templateUrl: "app/views/about.html"
-      }).when("/installations", {
-        templateUrl: "app/views/installations.html"
       }).when("/faq", {
         templateUrl: "app/views/faq.html"
+      }).when("/installations", {
+        templateUrl: "app/views/installations.html"
+      }).when("/installation/:slug", {
+        templateUrl: "app/views/installation.html"
       }).otherwise({
         redirectTo: "/"
+      });
+    }
+  ]);
+
+}).call(this);
+
+(function() {
+  this.app.controller("InstallationController", [
+    "$scope", "$http", "$routeParams", function($scope, $http, $routeParams) {
+      return $http.get("/app/api/installations.json").success(function(data, status, headers, config) {
+        $scope.installation = _.find(data, function(i) {
+          return i.slug === $routeParams.slug;
+        });
+        return $scope.installation.template = "/app/views/installations/" + $scope.installation.slug + ".html";
+      });
+    }
+  ]);
+
+}).call(this);
+
+(function() {
+  this.app.controller("InstallationsController", [
+    "$scope", "$http", function($scope, $http) {
+      return $http.get("/app/api/installations.json").success(function(data, status, headers, config) {
+        return $scope.installations = data;
       });
     }
   ]);
@@ -32,7 +59,6 @@
       maxRotation = 20;
       (function(maxRotation) {
         return animPromise = $interval(function() {
-          console.log("Angling!");
           return $scope.angle = _.random(-maxRotation, maxRotation);
         }, animFrequency);
       })(maxRotation);

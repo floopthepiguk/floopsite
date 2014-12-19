@@ -4,23 +4,22 @@
    
     # The angle of the pig
     $scope.angle  = 0
+
+
+    # Animation settings
     animPromise   = undefined
-  
-    #The animation promise (for checking if it's started etc.)
     animFrequency = 3000
     maxRotation   = 20
+
 
     #The loop
     ((maxRotation) ->
       animPromise = $interval(->
-        console.log "Angling!"
         $scope.angle = _.random(-maxRotation, maxRotation)
       , animFrequency)) maxRotation
 
+
+    # Make sure that the interval is destroyed too
     $scope.$on "$destroy", ->
-      # Make sure that the interval is destroyed too
       $interval.cancel(animPromise)
-
-    
 ]
-
