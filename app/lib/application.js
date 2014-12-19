@@ -14,7 +14,7 @@
         templateUrl: "app/views/faq.html"
       }).when("/installations", {
         templateUrl: "app/views/installations.html"
-      }).when("/installation/:slug", {
+      }).when("/installations/:slug", {
         templateUrl: "app/views/installation.html"
       }).otherwise({
         redirectTo: "/"
@@ -28,10 +28,9 @@
   this.app.controller("InstallationController", [
     "$scope", "$http", "$routeParams", function($scope, $http, $routeParams) {
       return $http.get("/app/api/installations.json").success(function(data, status, headers, config) {
-        $scope.installation = _.find(data, function(i) {
+        return $scope.installation = _.find(data, function(i) {
           return i.slug === $routeParams.slug;
         });
-        return $scope.installation.template = "/app/views/installations/" + $scope.installation.slug + ".html";
       });
     }
   ]);

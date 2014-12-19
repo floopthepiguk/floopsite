@@ -2,7 +2,7 @@
   <p>
     <a href = "/#/installations">Installations</a> / <span>{{installation.name}}</span>
   </p>
-  <div ng-include="installation.template">
+  <div ng-include="'/app/views/installations/' + installation.slug + '.html'">
   </div>
 </div>
 
