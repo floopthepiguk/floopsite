@@ -1,10 +1,18 @@
 <div ng-controller="InstallationsController">
   <h2>Installations</h2>
 
+
+  <div style = "text-align: center">
+    <button ng-click="filter=''" ng-class="{selected: filter==''}">All</button>
+    <button ng-click="filter='Minimalism'" ng-class="{selected: filter=='Minimalism'}">Minimalism</button>
+    <button ng-click="filter='Clocks'" ng-class="{selected: filter=='Clocks'}">Clocks</button>
+  </div>
+
   <ul class="inline-list" style = "list-style: none">
-    <li ng-repeat="installation in installations">
+    <li ng-repeat="installation in installations | filter:filter">
       <h3>{{ installation.name }}</h3>
       <img ng-src="{{installation.thumbnail}}"/>
+      <p>Sequence: {{ installation.sequence }} </p>
       <p>
         {{ installation.snippet }}
       </p>

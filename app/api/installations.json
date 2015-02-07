@@ -1,18 +1,21 @@
 [
     {
         "name": "Picoblog", 
+        "sequence": "Minimalism",
         "slug": "picoblog", 
         "thumbnail": "http://lorempixel.com/100/100/", 
         "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non metus vehicula, aliquet nunc eu, pharetra sapien. Suspendisse et rhoncus eros. In hac habitasse platea dictumst. Nunc mi justo, accumsan id dapibus vitae, mattis ac risus. Ut ultricies purus non libero placerat tincidunt."
     },
     {
-        "name": "Picoblog2", 
-        "slug": "picoblog2", 
+        "name": "Interesting Times (watch and learn)",
+        "sequence": "Clocks",
+        "slug": "interesting_times", 
         "thumbnail": "http://lorempixel.com/100/100/", 
         "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non metus vehicula, aliquet nunc eu, pharetra sapien. Suspendisse et rhoncus eros. In hac habitasse platea dictumst. Nunc mi justo, accumsan id dapibus vitae, mattis ac risus. Ut ultricies purus non libero placerat tincidunt."
     },
     {
-        "name": "Picoblog3", 
+        "name": "Prime Time",
+        "sequence": "Clocks",
         "slug": "picoblog3", 
         "thumbnail": "http://lorempixel.com/100/100/", 
         "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non metus vehicula, aliquet nunc eu, pharetra sapien. Suspendisse et rhoncus eros. In hac habitasse platea dictumst. Nunc mi justo, accumsan id dapibus vitae, mattis ac risus. Ut ultricies purus non libero placerat tincidunt."
